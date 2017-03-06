@@ -2,6 +2,7 @@ import pandas as pd
 import nba_py.player
 import nba_py.shotchart
 import csv 
+import csv_reader
 
 # Ask user which player they would like to scrape and calculate
 # hothandedness for
