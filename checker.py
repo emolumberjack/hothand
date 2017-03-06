@@ -43,14 +43,11 @@ class hotChecker:
 			if shotBool == "Made Shot": # if this shot was made,
 
 				if lastShotCompleted == "true": # and the last shot was made, aka hot
-					print("iterated ", shotBool)
 					hotHandShotsCompleted = hotHandShotsCompleted + 1
 					lastShotCompleted = "true"
 				else:
 					lastShotCompleted = "true"
-					print("set true, but not iterated (always 1) ", shotBool)
 			else:
-				print("remained (always 0) ", shotBool)
 				lastShotCompleted = "false"
 
 

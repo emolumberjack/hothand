@@ -13,5 +13,5 @@ playerId = 201939
 
 curryShots = nba_py.shotchart.ShotChart(201939)
 
-curryShots.shot_chart().to_csv(path_or_buf='curryshots.csv')
+curryShots.shot_chart().to_csv(path_or_buf='shotLog.csv')
 
