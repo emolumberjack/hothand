@@ -2,13 +2,6 @@ import pandas as pd
 import nba_py.player
 import nba_py.shotchart
 import csv 
-''' with open('curry.csv', 'w', newline='') as fp:
-	a = csv.writer(fp, delimiter=',')
-
-	
-
-	a.writerows(curryShots.shot_chart())
-'''
 
 # Ask user which player they would like to scrape and calculate
 # hothandedness for
