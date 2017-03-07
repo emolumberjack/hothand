@@ -11,9 +11,11 @@ import checker
 
 # refers to NBA player's id on stats.nba.com
 # can be found in url for player's page
-playerId = 201939
 
-playerShots = nba_py.shotchart.ShotChart(201939)
+playerId = input("Enter a player id (Steph Curry = 201939): ")
+print("Scraping....");
+
+playerShots = nba_py.shotchart.ShotChart(playerId)
 
 playerShots.shot_chart().to_csv(path_or_buf='shotLog.csv')
 
