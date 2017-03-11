@@ -52,10 +52,11 @@ class hotChecker:
 
 		# average field goal completion as percentage
 		avgFgPerc = ( fgSuccess / fgAttempted) * 100
-
-		gameOutput = " " + str(fgAttempted) + " " + str(hotFgPerc) + " " + str(coolFgPerc) + " " + str(avgFgPerc)
 		
-		return gameOutput
+		fgValues = [fgAttempted, hotFgPerc, coolFgPerc, avgFgPerc]
+
+
+		return fgValues
 
 
 
