@@ -2,7 +2,7 @@ import csv
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('curryshots.csv', index_col = 0)
+df = pd.read_csv('shotLog.csv', index_col = 0)
 
 #Prints all the game id's 
 
@@ -42,7 +42,4 @@ for num in range(0,1000):
 		simplelist.append(x)
 
 	gameNumPrevious = gameNum
-
-print(simplelist[1].EVENT_TYPE)
-print(simplelist[1].GAME_ID)
 
