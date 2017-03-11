@@ -53,10 +53,9 @@ class hotChecker:
 		# average field goal completion as percentage
 		avgFgPerc = ( fgSuccess / fgAttempted) * 100
 
-		print("In this game, this player attempted ", fgAttempted, " field goals.\n")
-		print("While hot, this player had a ", hotFgPerc, " field goal completion percentage.\n")
-		print("While cool, this player had a ", coolFgPerc, " field goal completion percentage.\n")
-		print("On average, this player had a ", avgFgPerc, " field goal completion percentage.\n")
+		gameOutput = " " + str(fgAttempted) + " " + str(hotFgPerc) + " " + str(coolFgPerc) + " " + str(avgFgPerc)
+		
+		return gameOutput
 
 
 

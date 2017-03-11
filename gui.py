@@ -31,13 +31,16 @@ class AppWindow:
 		self.close.pack(side=LEFT)
 
 		# Add a Message widget to display output
-		self.msg = Message(master)
-		self.msg.pack()
+		self.text = Text(master )
+		self.text.pack()
 
 
 	def run(self):
 	#Passes hotHand.main() the text stored in the entry field	
-		hotHand.main( self.entryBar.get() )
+		self.text.delete(1.0, END)
+		self.text.insert(END, hotHand.main( self.entryBar.get() ))
+		
+
 
 root = Tk()
 
