@@ -12,16 +12,15 @@ import checker
 # refers to NBA player's id on stats.nba.com
 # can be found in url for player's page
 
-playerId = input("Enter a player id (Steph Curry = 201939): ")
-print("Scraping....");
+def main(playerId):
 
-playerShots = nba_py.shotchart.ShotChart(playerId)
+	playerShots = nba_py.shotchart.ShotChart(playerId)
+	print("Scraping... \n")
 
-playerShots.shot_chart().to_csv(path_or_buf='shotLog.csv')
+	playerShots.shot_chart().to_csv(path_or_buf='shotLog.csv')
 
-for num in range(0,10):
-	print(num)
-	x = checker.hotChecker(csv_reader.simplelist[num])
-	x.simpleHot()
-	print("\n \n \n \n")
-
+	for num in range(0,10):
+		print(num)
+		x = checker.hotChecker(csv_reader.simplelist[num])
+		x.simpleHot()
+		print("\n \n \n \n")

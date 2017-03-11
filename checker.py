@@ -26,27 +26,20 @@ class hotChecker:
 		# counter for number of completed field goals
 		fgSuccess = 0
 
-		# loop through each element of self.eventType
-		for shotBool in self.eventType:
-			if shotBool == "Made Shot":
-				fgSuccess = fgSuccess + 1
-
-		# average field goal completion as percentage
-		avgFgPerc = (fgSuccess / fgAttempted) * 100
-
-
-		# loop through again (shitty) and determine number of field goals completed while hot ( hotHandShotsCompleted)
+		# loop through and determine number of field goals completed while hot (hotHandShotsCompleted)
 		lastShotCompleted = "false"
 		hotHandShotsCompleted = 0
 
 		for shotBool in self.eventType:
 			if shotBool == "Made Shot": # if this shot was made,
 
+				fgSuccess = fgSuccess + 1 # increase the completed shots counter by 1
+
 				if lastShotCompleted == "true": # and the last shot was made, aka hot
 					hotHandShotsCompleted = hotHandShotsCompleted + 1
 					lastShotCompleted = "true"
-				else:
-					lastShotCompleted = "true"
+				else: # and the last shot was missed, aka cool
+					lastShotCompleted = "true" 
 			else:
 				lastShotCompleted = "false"
 
@@ -54,7 +47,15 @@ class hotChecker:
 		# percentage of shots completed while hot
 		hotFgPerc = ( hotHandShotsCompleted / fgSuccess ) * 100
 
+		# percentage of shots completed while cool
+		coolFgPerc = 100 - hotFgPerc
+
+		# average field goal completion as percentage
+		avgFgPerc = ( fgSuccess / fgAttempted) * 100
+
+		print("In this game, this player attempted ", fgAttempted, " field goals.\n")
 		print("While hot, this player had a ", hotFgPerc, " field goal completion percentage.\n")
+		print("While cool, this player had a ", coolFgPerc, " field goal completion percentage.\n")
 		print("On average, this player had a ", avgFgPerc, " field goal completion percentage.\n")
 
 
